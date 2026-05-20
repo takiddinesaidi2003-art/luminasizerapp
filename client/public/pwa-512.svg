@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a6e"/>
+      <stop offset="100%" stop-color="#0c1526"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="48%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sunGrad" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+
+  <!-- Soft glow -->
+  <ellipse cx="256" cy="225" rx="190" ry="170" fill="url(#glow)"/>
+
+  <!-- Sun rays — 8 rounded pillars -->
+  <!-- top -->
+  <rect x="244" y="56" width="24" height="52" rx="12" fill="#f59e0b"/>
+  <!-- bottom -->
+  <rect x="244" y="328" width="24" height="52" rx="12" fill="#f59e0b"/>
+  <!-- left -->
+  <rect x="56" y="218" width="52" height="24" rx="12" fill="#f59e0b"/>
+  <!-- right -->
+  <rect x="404" y="218" width="52" height="24" rx="12" fill="#f59e0b"/>
+  <!-- top-right diag -->
+  <rect x="354" y="91" width="24" height="52" rx="12" fill="#f59e0b" transform="rotate(45 366 117)"/>
+  <!-- top-left diag -->
+  <rect x="134" y="91" width="24" height="52" rx="12" fill="#f59e0b" transform="rotate(-45 146 117)"/>
+  <!-- bottom-right diag -->
+  <rect x="354" y="297" width="24" height="52" rx="12" fill="#f59e0b" transform="rotate(-45 366 323)"/>
+  <!-- bottom-left diag -->
+  <rect x="134" y="297" width="24" height="52" rx="12" fill="#f59e0b" transform="rotate(45 146 323)"/>
+
+  <!-- Sun body outer -->
+  <circle cx="256" cy="228" r="108" fill="#f59e0b"/>
+  <!-- Sun body inner -->
+  <circle cx="256" cy="228" r="88" fill="url(#sunGrad)"/>
+  <!-- Highlight -->
+  <circle cx="228" cy="207" r="30" fill="#fef9c3" opacity="0.55"/>
+
+  <!-- Lightning bolt (green) -->
+  <path d="M 280 322 L 236 424 L 266 424 L 240 488 L 300 392 L 268 392 Z"
+        fill="url(#boltGrad)" stroke="#065f46" stroke-width="4" stroke-linejoin="round"/>
+</svg>
